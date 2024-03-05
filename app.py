@@ -17,3 +17,10 @@ if hist_button: # al hacer clic en el botón
     st.plotly_chart(fig, use_container_width=True)
 
 disp_button = st.button("Construir gráfico de dispersión")
+
+if disp_button:
+    st.header("Dispersión de venta de autos")
+    st.writer("Hola")
+
+    fig_1 = px.scatter(car_data, x="odometer", y="price") # crear un gráfico de dispersión
+    st.plotly_chart(fig_1, use_container_width=True) # crear gráfico de dispersión
