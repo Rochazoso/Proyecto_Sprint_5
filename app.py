@@ -22,5 +22,10 @@ if disp_button:
     st.header("Dispersión de venta de autos")
     st.write("Hola")
 
+    min_price = st.slider("Precio mínimo", min_value=car_data['price'].min(), max_value=car_data['price'].max(), value=car_data['price'].min())
+    max_price = st.slider("Precio máximo", min_value=car_data['price'].min(), max_value=car_data['price'].max(), value=car_data['price'].max())
+    filtered_data = car_data[(car_data['price'] >= min_price) & (car_data['price'] <= max_price)]
+    
+
     fig_1 = px.scatter(car_data, x="odometer", y="price") # crear un gráfico de dispersión
     st.plotly_chart(fig_1, use_container_width=True) # crear gráfico de dispersión
