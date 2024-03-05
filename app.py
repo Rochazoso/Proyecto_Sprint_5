@@ -12,10 +12,6 @@ if hist_button: # al hacer clic en el botón
             
             # crear un histograma
     fig = px.histogram(car_data, x="odometer")
-
-    options = car_data["price"].unique().tolist()
-    price = st.selectbox('Which one do you want to see?', options, 0)
-    car_data = car_data[car_data['price'] == price]
         
             # mostrar un gráfico Plotly interactivo
     st.plotly_chart(fig, use_container_width=True)
@@ -27,4 +23,9 @@ if disp_button:
     st.write("Hola")
 
     fig_1 = px.scatter(car_data, x="odometer", y="price") # crear un gráfico de dispersión
+
+    options = car_data["price"].unique().tolist()
+    price = st.selectbox('Which one do you want to see?', options, 0)
+    car_data = car_data[car_data['price'] == price]
+    
     st.plotly_chart(fig_1, use_container_width=True) # crear gráfico de dispersión
