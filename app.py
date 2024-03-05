@@ -21,11 +21,12 @@ disp_button = st.button("Construir gráfico de dispersión")
 if disp_button:
     st.header("Dispersión de venta de autos")
     st.write("Hola")
+    st.write(car_data)
 
-    fig_1 = px.scatter(car_data, x="odometer", y="price") # crear un gráfico de dispersión
+    fig_1 = px.scatter(car_data, x="odometer", y="price", color="red") # crear un gráfico de dispersión
 
     options = car_data["price"].unique().tolist()
     price = st.selectbox('Which one do you want to see?', options, 0)
     car_data = car_data[car_data['price'] == price]
-    
+
     st.plotly_chart(fig_1, use_container_width=True) # crear gráfico de dispersión
