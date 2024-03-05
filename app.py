@@ -14,8 +14,7 @@ if hist_button: # al hacer clic en el botón
     fig = px.histogram(car_data, x="odometer")
 
     options = car_data["price"].unique().tolist()
-    options_1 = car_data["odometer"].unique().tolist()
-    year = st.selectbox('Which one do you want to see?', options, options_1, 0)
+    price = st.selectbox('Which one do you want to see?', options, 0)
     car_data = car_data[car_data['price'] == price]
         
             # mostrar un gráfico Plotly interactivo
