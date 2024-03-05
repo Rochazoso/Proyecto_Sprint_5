@@ -7,6 +7,7 @@ hist_button = st.button('Construir histograma') # crear un botón
         
 if hist_button: # al hacer clic en el botón
 # escribir un mensaje
+    st.header('Venta de Autos')
     st.write('Creación de un histograma para el conjunto de datos de anuncios de venta de coches')
             
             # crear un histograma
