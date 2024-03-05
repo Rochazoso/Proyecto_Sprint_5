@@ -16,7 +16,7 @@ if hist_button: # al hacer clic en el botón
     options = car_data["price"].unique().tolist()
     options_1 = car_data["odometer"].unique().tolist()
     year = st.selectbox('Which one do you want to see?', options, options_1, 0)
-    car_data = car_data[car_data['price'] =price]
+    car_data = car_data[car_data['price'] == price]
         
             # mostrar un gráfico Plotly interactivo
     st.plotly_chart(fig, use_container_width=True)
