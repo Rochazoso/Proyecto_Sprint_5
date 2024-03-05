@@ -23,7 +23,7 @@ if disp_button:
     st.write("Hola")
     st.write(car_data)
 
-    fig_1 = px.scatter(car_data, x="odometer", y="price", color="red") # crear un gráfico de dispersión
+    fig_1 = px.scatter(car_data, x="odometer", y="price") # crear un gráfico de dispersión
 
     options = car_data["price"].unique().tolist()
     price = st.selectbox('Which one do you want to see?', options, 0)
