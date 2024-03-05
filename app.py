@@ -15,3 +15,5 @@ if hist_button: # al hacer clic en el botón
         
             # mostrar un gráfico Plotly interactivo
     st.plotly_chart(fig, use_container_width=True)
+
+disp_button = st.button("Construir gráfico de dispersión")
