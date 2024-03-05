@@ -29,4 +29,5 @@ if disp_button:
     price = st.selectbox('Which one do you want to see?', options, 0)
     car_data = car_data[car_data['price'] == price]
 
+    st.write(fig_1)
     st.plotly_chart(fig_1, use_container_width=True) # crear gráfico de dispersión
