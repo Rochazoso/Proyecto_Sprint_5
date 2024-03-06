@@ -3,9 +3,9 @@ import plotly.express as px
 import streamlit as st
         
 car_data = pd.read_csv('vehicles_us.csv') # leer los datos
-build_hist = st.checkbox('Construir histograma') # crear un botón
 
 st.header('Venta de coches')
+build_hist = st.checkbox('Construir histograma') # crear un botón
 
 if build_hist: # al hacer clic en el botón
 # escribir un mensaje
