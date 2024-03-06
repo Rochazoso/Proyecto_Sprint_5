@@ -4,7 +4,9 @@ import streamlit as st
         
 car_data = pd.read_csv('vehicles_us.csv') # leer los datos
 build_hist = st.checkbox('Construir histograma') # crear un botón
-        
+
+st.header('Venta de coches')
+
 if build_hist: # al hacer clic en el botón
 # escribir un mensaje
     st.header('Histograma de distribución de odometros de coches')
